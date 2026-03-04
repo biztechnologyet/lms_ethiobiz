@@ -1,0 +1,70 @@
+@import './assets/Inter/inter.css';
+@import 'frappe-ui/style.css';
+@import './styles/codemirror.css';
+
+
+
+/* Hide "Powered by Learning" icon (Zap) */
+.lucide-zap-icon {
+    display: none !important;
+}
+
+/* Hide "Help" icon (CircleHelp) */
+.lucide-circle-help-icon {
+    display: none !important;
+}
+
+/* Hide the container holding these icons (flex-1 space-x-3) */
+.flex.items-center.flex-1.flex-row.space-x-3 {
+    display: none !important;
+}
+
+/* Ensure Sidebar Toggle remains visible */
+/* The toggle button uses: size-4 text-ink-gray-7 duration-300 stroke-1.5 ease-in-out cursor-pointer */
+svg.size-4.text-ink-gray-7.duration-300.stroke-1\.5.ease-in-out.cursor-pointer,
+svg[class*="CollapseSidebar"],
+svg.lucide-chevrons-left,
+svg.lucide-chevrons-right {
+    display: block !important;
+    visibility: visible !important;
+}
+
+
+/* BISMALLAH v3.3.0 - Hide Help Elements (Preserve Toggle) */
+
+/* 1. Hide the "Getting Started" onboarding / help modals */
+div[class*="onboarding"], 
+div[id*="onboard"], 
+.help-modal, 
+[class*="HelpModal"],
+.onboarding-flow {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* 2. Hide "Powered by Learning" (Zap) and "Help" (CircleHelp) icons */
+svg.lucide-zap-icon, 
+.lucide-zap-icon, 
+svg.lucide-circle-help-icon, 
+.lucide-circle-help-icon {
+    display: none !important;
+}
+
+/* Hide their specific container to remove the gap */
+.flex.items-center.flex-1.flex-row.space-x-3:has(.lucide-zap-icon),
+.flex.items-center.flex-1.flex-row.space-x-3:has(.lucide-circle-help-icon),
+.flex.items-center.flex-1.flex-row.space-x-3 {
+    display: none !important;
+}
+
+/* 3. Keep Sidebar Collapse Button Visible */
+/* Target the collapse button separately using its classes */
+svg[class*="CollapseSidebar"], 
+svg.lucide-chevrons-left, 
+svg.lucide-chevrons-right,
+svg.size-4.text-ink-gray-7.duration-300.stroke-1\.5.ease-in-out.cursor-pointer {
+    display: block !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
