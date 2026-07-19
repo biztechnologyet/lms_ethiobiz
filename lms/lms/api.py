@@ -1390,7 +1390,7 @@ def capture_user_persona(responses):
 	return response
 
 
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def get_meta_info(type, route):
 	if frappe.db.exists("Website Meta Tag", {"parent": f"{type}/{route}"}):
 		meta_tags = frappe.get_all(
