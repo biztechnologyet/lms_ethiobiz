@@ -578,7 +578,7 @@ const setUpOnboarding = () => {
 		onboardingDetails = useOnboarding('learning')
 		onboardingDetails.setUp(steps)
 		isOnboardingStepsCompleted = onboardingDetails.isOnboardingStepsCompleted
-		showOnboarding.value = true
+		showOnboarding.value = false
 	}
 }
 
